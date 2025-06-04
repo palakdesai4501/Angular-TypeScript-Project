@@ -1,0 +1,72 @@
+.admin-table-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mat-mdc-header-cell {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.mat-mdc-cell {
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.fund-name-link {
+  color: #1976d2;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.mat-column-actions {
+  width: 80px;
+  text-align: center;
+}
+
+.mat-column-name {
+  width: 200px;
+}
+
+.mat-column-strategies,
+.mat-column-geographies,
+.mat-column-managers {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-column-currency {
+  width: 100px;
+}
+
+.mat-column-fundSize {
+  width: 120px;
+  text-align: right;
+}
+
+.mat-column-vintage {
+  width: 100px;
+  text-align: center;
+} 
