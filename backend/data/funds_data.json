@@ -10,7 +10,7 @@
       "Middle East"
     ],
     "currency": "CAD",
-    "fundSize": 1199.0,
+    "fundSize": 1199,
     "vintage": 2025,
     "managers": [
       "Silver Rock",
@@ -20,7 +20,7 @@
     "description": "Hedge fund with a long/short equity strategy."
   },
   {
-    "name": "ZRE Fund 75",
+    "name": "ZRE Fund 76",
     "strategies": [
       "Mezzanine"
     ],
@@ -53,7 +53,7 @@
     "description": "Diversified across multiple sectors and regions."
   },
   {
-    "name": "SFF Fund 87",
+    "name": "SFF Fund 88",
     "strategies": [
       "Private Debt",
       "Hedge Fund",
