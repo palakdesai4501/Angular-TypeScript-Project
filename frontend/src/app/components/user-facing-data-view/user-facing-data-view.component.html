@@ -1,0 +1,133 @@
+<div class="user-facing-container">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-container">
+    <mat-icon>hourglass_empty</mat-icon>
+    <p>Loading fund details...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="error-container">
+    <mat-icon color="warn">error</mat-icon>
+    <h2>Fund Not Found</h2>
+    <p>The requested fund could not be found.</p>
+    <button mat-raised-button color="primary" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      Back to Funds List
+    </button>
+  </div>
+
+  <!-- Fund Details -->
+  <div *ngIf="fund && !loading && !error" class="fund-details">
+    <!-- Header -->
+    <div class="header">
+      <button mat-icon-button (click)="goBack()" class="back-button">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <h1>{{fund.name}}</h1>
+      <button mat-raised-button color="primary" (click)="editFund()" class="edit-button">
+        <mat-icon>edit</mat-icon>
+        Edit Fund
+      </button>
+    </div>
+
+    <!-- Fund Information Cards -->
+    <div class="cards-container">
+      <!-- Basic Information Card -->
+      <mat-card class="info-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>info</mat-icon>
+            Basic Information
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="info-row">
+            <span class="label">Fund Name:</span>
+            <span class="value">{{fund.name}}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Currency:</span>
+            <span class="value currency">{{fund.currency}}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Fund Size:</span>
+            <span class="value fund-size">{{fund.fundSize | number:'1.2-2'}} {{fund.currency}}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Vintage Year:</span>
+            <span class="value">{{fund.vintage}}</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Strategies Card -->
+      <mat-card class="info-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>trending_up</mat-icon>
+            Investment Strategies
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chips-container">
+            <mat-chip-set>
+              <mat-chip *ngFor="let strategy of fund.strategies" class="strategy-chip">
+                {{strategy}}
+              </mat-chip>
+            </mat-chip-set>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Geographies Card -->
+      <mat-card class="info-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>public</mat-icon>
+            Geographic Focus
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chips-container">
+            <mat-chip-set>
+              <mat-chip *ngFor="let geography of fund.geographies" class="geography-chip">
+                {{geography}}
+              </mat-chip>
+            </mat-chip-set>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Managers Card -->
+      <mat-card class="info-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>people</mat-icon>
+            Fund Managers
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="managers-list">
+            <div *ngFor="let manager of fund.managers" class="manager-item">
+              <mat-icon>person</mat-icon>
+              <span>{{manager}}</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Description Card -->
+      <mat-card class="info-card description-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>description</mat-icon>
+            Fund Description
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="description">{{fund.description}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div> 
