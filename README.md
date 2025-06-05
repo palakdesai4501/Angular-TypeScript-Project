@@ -5,10 +5,6 @@
 **Name:** Palak Desai  
 **Email:** desai1j@uwindsor.ca  
 
-## Important Project Notes
-
-**Port Configuration:** Please note that when running `ng serve`, this Angular project runs on port **4300** instead of the default port 4200.
-
 **Technical Implementation Highlights:**
 
 This project demonstrates a comprehensive understanding of modern web development practices:
