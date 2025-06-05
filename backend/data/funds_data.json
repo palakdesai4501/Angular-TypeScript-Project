@@ -36,8 +36,9 @@
     "description": "Hedge fund with a long/short equity strategy."
   },
   {
-    "name": "LAZ Fund 24",
+    "name": "LAZ Fund 25",
     "strategies": [
+      "Infrastructure",
       "Distressed Assets"
     ],
     "geographies": [
