@@ -24,7 +24,7 @@ This project demonstrates a comprehensive understanding of modern web developmen
    ```bash
    cd backend
    npm install
-   npm run dev
+   npm start
    ```
 
 2. **Frontend Setup:**
